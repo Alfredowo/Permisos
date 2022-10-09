@@ -9,7 +9,7 @@ using EntidadesPermisos;
 
 namespace AccesoDatosPermisos
 {
-    class aHerramientas
+    public class aHerramientas
     {
         Base b = new Base("localhost", "root", "", "permisos", 3306);
         public void Borrar(Herramientas Entidad)
