@@ -21,7 +21,7 @@ namespace AccesoDatosPermisos
         public void Guardar(Herramientas Entidad)
         {
             b.Comando(string.Format("CALL insertarherramientas({0}, '{1}', '{2}', '{3}', {4});",
-                Entidad.Codigo, Entidad.Nombre, Entidad.Descripcion, Entidad.Marca, Entidad.medida));
+                Entidad.Codigo, Entidad.Nombre, Entidad.Descripcion, Entidad.Marca, Entidad.Medida));
         }
 
         public DataSet Mostrar()

@@ -51,7 +51,7 @@ namespace PresentacionPermisos
             entidad.Nombre = dtg.Rows[fila].Cells[1].Value.ToString();
             entidad.Descripcion = dtg.Rows[fila].Cells[2].Value.ToString();
             entidad.Marca = dtg.Rows[fila].Cells[3].Value.ToString();
-            entidad.medida = int.Parse(dtg.Rows[fila].Cells[4].Value.ToString());
+            entidad.Medida = int.Parse(dtg.Rows[fila].Cells[4].Value.ToString());
             switch (col)
             {
                 case 4:

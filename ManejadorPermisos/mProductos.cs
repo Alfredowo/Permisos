@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatosPermisos;
 using EntidadesPermisos;
+using Crud;
 
 namespace ManejadorPermisos
 {
     public class mProductos
     {
         aProductos a = new aProductos();
+        Grafico g = new Grafico();
 
         public void Borrar(Productos Entidad)
         {
@@ -38,9 +40,9 @@ namespace ManejadorPermisos
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
             tabla.DataSource = a.Mostrar().Tables["productos"];
-            tabla.Columns.Insert(4, g.Boton("Editar", Color.SpringGreen));
-            tabla.Columns.Insert(5, g.Boton("Borrar", Color.Salmon));
-            tabla.Columns[0].Visible = false;
+            //tabla.Columns.Insert(4, g.Boton("Editar", Color.SpringGreen));
+            //tabla.Columns.Insert(5, g.Boton("Borrar", Color.Salmon));
+            //tabla.Columns[0].Visible = false;
         }
     }
 }

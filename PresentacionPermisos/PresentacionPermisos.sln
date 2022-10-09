@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentacionPermisos", "PresentacionPermisos.csproj", "{1CABAD99-99DF-44F7-85CF-91A593549D34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BFE1A6D5-0979-4C84-B78E-894D3C8C3DD7} = {BFE1A6D5-0979-4C84-B78E-894D3C8C3DD7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatosPermisos", "..\AccesoDatosPermisos\AccesoDatosPermisos.csproj", "{BFE1A6D5-0979-4C84-B78E-894D3C8C3DD7}"
 EndProject

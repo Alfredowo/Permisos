@@ -16,5 +16,17 @@ namespace PresentacionPermisos
         {
             InitializeComponent();
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            frmProductos frm = new frmProductos();
+            frm.Show();
+        }
+
+        private void btnHerramientas_Click(object sender, EventArgs e)
+        {
+            frmHerramientas frm = new frmHerramientas();
+            frm.Show();
+        }
     }
 }

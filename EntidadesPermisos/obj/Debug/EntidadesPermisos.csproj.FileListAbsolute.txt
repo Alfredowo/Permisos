@@ -1,0 +1,6 @@
+C:\Users\musul\source\repos\Permisos\EntidadesPermisos\bin\Debug\EntidadesPermisos.dll
+C:\Users\musul\source\repos\Permisos\EntidadesPermisos\bin\Debug\EntidadesPermisos.pdb
+C:\Users\musul\source\repos\Permisos\EntidadesPermisos\obj\Debug\EntidadesPermisos.csproj.AssemblyReference.cache
+C:\Users\musul\source\repos\Permisos\EntidadesPermisos\obj\Debug\EntidadesPermisos.csproj.CoreCompileInputs.cache
+C:\Users\musul\source\repos\Permisos\EntidadesPermisos\obj\Debug\EntidadesPermisos.dll
+C:\Users\musul\source\repos\Permisos\EntidadesPermisos\obj\Debug\EntidadesPermisos.pdb

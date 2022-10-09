@@ -84,6 +84,9 @@
     <EmbeddedResource Include="frmHerramientasRegistro.resx">
       <DependentUpon>frmHerramientasRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>

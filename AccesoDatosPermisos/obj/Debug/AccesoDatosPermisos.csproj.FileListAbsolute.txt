@@ -1,0 +1,12 @@
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\obj\Debug\AccesoDatosPermisos.csproj.AssemblyReference.cache
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\obj\Debug\AccesoDatosPermisos.csproj.CoreCompileInputs.cache
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\bin\Debug\AccesoDatosPermisos.dll
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\bin\Debug\AccesoDatosPermisos.pdb
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\bin\Debug\ConectarBd.dll
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\bin\Debug\EntidadesPermisos.dll
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\bin\Debug\MySql.Data.dll
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\bin\Debug\EntidadesPermisos.pdb
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\bin\Debug\ConectarBd.pdb
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\obj\Debug\AccesoDatosPermisos.csproj.CopyComplete
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\obj\Debug\AccesoDatosPermisos.dll
+C:\Users\musul\source\repos\Permisos\AccesoDatosPermisos\obj\Debug\AccesoDatosPermisos.pdb

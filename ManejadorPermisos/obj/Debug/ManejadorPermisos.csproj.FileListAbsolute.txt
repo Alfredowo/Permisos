@@ -1,0 +1,16 @@
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\obj\Debug\ManejadorPermisos.csproj.AssemblyReference.cache
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\obj\Debug\ManejadorPermisos.csproj.CoreCompileInputs.cache
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\ManejadorPermisos.dll
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\ManejadorPermisos.pdb
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\AccesoDatosPermisos.dll
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\Crud.dll
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\EntidadesPermisos.dll
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\ConectarBd.dll
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\MySql.Data.dll
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\AccesoDatosPermisos.pdb
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\EntidadesPermisos.pdb
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\Crud.pdb
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\bin\Debug\ConectarBd.pdb
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\obj\Debug\ManejadorPermisos.csproj.CopyComplete
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\obj\Debug\ManejadorPermisos.dll
+C:\Users\musul\source\repos\Permisos\ManejadorPermisos\obj\Debug\ManejadorPermisos.pdb
