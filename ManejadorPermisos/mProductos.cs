@@ -40,8 +40,9 @@ namespace ManejadorPermisos
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
             tabla.DataSource = a.Mostrar().Tables["productos"];
-            //tabla.Columns.Insert(4, g.Boton("Editar", Color.SpringGreen));
-            //tabla.Columns.Insert(5, g.Boton("Borrar", Color.Salmon));
+            tabla.Columns.Insert(4, g.Boton("Editar", Color.SpringGreen));
+            tabla.Columns.Insert(5, g.Boton("Borrar", Color.Salmon));
+            tabla.Rows[tabla.Rows.Count - 1].Height = (int)0.5;
             //tabla.Columns[0].Visible = false;
         }
     }

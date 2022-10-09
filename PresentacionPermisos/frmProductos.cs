@@ -73,7 +73,7 @@ namespace PresentacionPermisos
 
         private void dtg_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //se llenan los vaores de la tabla con lo que hay en el dtg
+            //se llenan los valores de la tabla con lo que hay en el dtg
             fila = e.RowIndex;
             col = e.ColumnIndex;
         }
