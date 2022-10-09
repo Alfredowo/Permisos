@@ -43,7 +43,7 @@ namespace ManejadorPermisos
             tabla.Columns.Insert(5, g.Boton("Editar", Color.SpringGreen));
             tabla.Columns.Insert(6, g.Boton("Borrar", Color.Salmon));
             tabla.Rows[tabla.Rows.Count - 1].Height = (int)0.5;
-            tabla.Columns[0].Visible = false;
+            //tabla.Columns[0].Visible = false;
         }
     }
 }
