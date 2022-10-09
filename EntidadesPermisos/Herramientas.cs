@@ -14,13 +14,13 @@ namespace EntidadesPermisos
             Nombre = nombre;
             Descripcion = descripcion;
             Marca = marca;
-            this.medida = medida;
+            Medida = medida;
         }
 
         public int Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Marca { get; set; }
-        public int medida { get; set; }
+        public int Medida { get; set; }
     }
 }
