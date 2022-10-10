@@ -16,7 +16,8 @@ namespace PresentacionPermisos
     {
         mProductos manejador;
         public static Productos entidad = new Productos(0, "", "", "");
-        public static bool agregar = frmMenu.agregar;
+        public static bool agregar = frmMenu.agregar, mostrar = frmMenu.mostrar, eliminar = frmMenu.eliminar,
+            modificar = frmMenu.modificar;
         int fila = 0, col = 0;
 
         public frmProductos()
@@ -40,9 +41,15 @@ namespace PresentacionPermisos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             entidad.Codigo = -1;
-            frmProductosRegistro frm = new frmProductosRegistro();
-            frm.ShowDialog();
-            Actualizar();
+            if (agregar == false)
+                MessageBox.Show("No tienes permisos");
+            else
+            {
+                frmProductosRegistro frm = new frmProductosRegistro();
+                frm.ShowDialog();
+                Actualizar();
+            }
+            
         }
 
         private void dtg_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -56,17 +63,27 @@ namespace PresentacionPermisos
             {
                 case 4:
                     { //editar
-                        frmProductosRegistro frm = new frmProductosRegistro();
-                        frm.ShowDialog();
-                        txtBuscar.Text = "";
-                        Actualizar();
+                        if (modificar == false)
+                            MessageBox.Show("No tienes permisos");
+                        else
+                        {
+                            frmProductosRegistro frm = new frmProductosRegistro();
+                            frm.ShowDialog();
+                            txtBuscar.Text = "";
+                            Actualizar();
+                        }
                     }
                     break;
                 case 5:
                     { //borrar 
-                        manejador.Borrar(entidad);
-                        txtBuscar.Text = "";
-                        Actualizar();
+                        if (eliminar == false)
+                            MessageBox.Show("No tienes permisos");
+                        else
+                        {
+                            manejador.Borrar(entidad);
+                            txtBuscar.Text = "";
+                            Actualizar();
+                        }
                     }
                     break;
             }

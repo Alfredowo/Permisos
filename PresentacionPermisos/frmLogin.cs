@@ -38,7 +38,6 @@ namespace PresentacionPermisos
                 {
                     MessageBox.Show("bienvenido");
                     frmMenu menu = new frmMenu();
-                    Visible = false;
                     menu.ShowDialog();
                 }
             }
