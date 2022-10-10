@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EntidadesPermisos;
+using ManejadorPermisos;
 
 namespace PresentacionPermisos
 {
     public partial class frmLogin : Form
     {
+        mUsuarios m = new mUsuarios();
         public frmLogin()
         {
             InitializeComponent();
@@ -27,6 +30,20 @@ namespace PresentacionPermisos
         {
             frmHerramientas frm = new frmHerramientas();
             frm.Show();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(m.login(txtNombre.Text));
+            bool valid = m.Validar(txtNombre.Text);
+            if (valid == true)
+            {
+                btnHerramientas.Enabled = true;
+                btnProductos.Enabled = true;
+                MessageBox.Show("Usuario correcto");
+            }
+            else
+                MessageBox.Show("Error");
         }
     }
 }

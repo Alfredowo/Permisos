@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="aHerramientas.cs" />
     <Compile Include="aProductos.cs" />
+    <Compile Include="aUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
