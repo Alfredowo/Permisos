@@ -28,7 +28,7 @@ namespace PresentacionPermisos
         {
             try
             {
-                var ds = a.Validar(txtNombre.Text);
+                var ds = a.Login(txtNombre.Text);
                 var dt = new DataTable();
                 dt = ds.Tables[0];
                 idUsuario = int.Parse(dt.Rows[0]["id"].ToString());
@@ -36,7 +36,7 @@ namespace PresentacionPermisos
                 usuario = dt.Rows[0]["nombre"].ToString();
                 if (usuario == txtNombre.Text)
                 {
-                    MessageBox.Show("bienvenido");
+                    MessageBox.Show("Bienvenido" + txtNombre.Text);
                     frmMenu menu = new frmMenu();
                     menu.ShowDialog();
                 }
@@ -46,6 +46,11 @@ namespace PresentacionPermisos
                 MessageBox.Show("Usuario incorrecto");
             }
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

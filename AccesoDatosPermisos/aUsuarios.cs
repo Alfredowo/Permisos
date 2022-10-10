@@ -13,7 +13,7 @@ namespace AccesoDatosPermisos
     {
         Base b = new Base("localhost", "root", "", "permisos", 3306);
 
-        public DataSet Validar(string usuario)
+        public DataSet Login(string usuario)
         {
             return b.Obtener(string.Format("select * from usuarios where nombre = '{0}'", usuario), "usuarios");
         }

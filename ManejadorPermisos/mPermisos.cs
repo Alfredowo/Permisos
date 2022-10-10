@@ -9,20 +9,10 @@ namespace ManejadorPermisos
 {
     public class mPermisos
     {
-        public void EvaluarPermisos(int modulo, bool mostrar, bool agregar, bool modificar, bool eliminar,
-            Button productos, Button herramientas)
+        public void EvaluarLectura(bool mostrar, Button boton)
         {
-            if (modulo == 1)
-            {
-                if (mostrar == true)
-                    productos.Enabled = true;
-                
-            }
-            if (modulo == 2)
-            {
-                if (mostrar == true)
-                    herramientas.Enabled = true;
-            }
+            if (mostrar == true)
+                boton.Enabled = true;
         }
     }
 }

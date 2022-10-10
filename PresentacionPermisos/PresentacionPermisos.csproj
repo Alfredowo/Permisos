@@ -110,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -137,6 +138,15 @@
       <Project>{8e6739a8-3d42-4c86-81ad-326aa3dee4e7}</Project>
       <Name>ManejadorPermisos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario azul.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

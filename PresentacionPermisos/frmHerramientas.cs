@@ -16,9 +16,8 @@ namespace PresentacionPermisos
     {
         mHerramientas manejador;
         public static Herramientas entidad = new Herramientas(0, "", "", "", 0);
-        public static bool agregar = frmMenu.agregar, mostrar = frmMenu.mostrar, eliminar = frmMenu.eliminar,
-            modificar = frmMenu.modificar;
-        //public static int modulo = 2;
+        public static bool[,] permisos = frmMenu.permisos;
+        public static int agregar = 0, modificar = 1, eliminar = 2, modulo = 1;
         int fila = 0, col = 0;
 
         public frmHerramientas()
@@ -42,7 +41,7 @@ namespace PresentacionPermisos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             entidad.Codigo = -1;
-            if (agregar == false)
+            if (permisos[modulo, agregar] == false)
                 MessageBox.Show("no tienes permiso");
             else
             {
@@ -64,7 +63,7 @@ namespace PresentacionPermisos
             {
                 case 4:
                     { //editar
-                        if (modificar == false)
+                        if (permisos[modulo, modificar] == false)
                             MessageBox.Show("no tienes permiso");
                         else
                         {
@@ -77,7 +76,7 @@ namespace PresentacionPermisos
                     break;
                 case 5:
                     { //borrar 
-                        if (eliminar == false)
+                        if (permisos[modulo, eliminar] == false)
                             MessageBox.Show("no tienes permiso");
                         else
                         {

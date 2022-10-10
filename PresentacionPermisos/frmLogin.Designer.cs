@@ -30,66 +30,135 @@ namespace PresentacionPermisos
         private void InitializeComponent()
         {
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(249, 157);
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.ForeColor = System.Drawing.Color.White;
+            this.txtNombre.Location = new System.Drawing.Point(284, 77);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(466, 27);
             this.txtNombre.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(251, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(263, 283);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(452, 251);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(125, 37);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 160);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(279, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(77, 21);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Nombre";
+            this.label1.Text = "Nombre:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 330);
+            this.panel1.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(65)))), ((int)(((byte)(80)))));
+            this.pictureBox1.Image = global::PresentacionPermisos.Properties.Resources.usuario_azul;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 330);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 210);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(279, 127);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Contraseña";
+            this.label2.Size = new System.Drawing.Size(107, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Contraseña:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(284, 152);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(466, 27);
+            this.textBox1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(751, -4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 32);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "x";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtNombre);
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "frmLogin";
+            this.Opacity = 0.9D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,10 +166,13 @@ namespace PresentacionPermisos
 
         #endregion
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

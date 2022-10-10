@@ -18,7 +18,7 @@ namespace ManejadorPermisos
             DataGridView tabla = new DataGridView();
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
-            tabla.DataSource = a.Validar("").Tables["usuarios"];
+            tabla.DataSource = a.Login("").Tables["usuarios"];
             return tabla.Rows[0].ToString();
         }
         public bool Validar(string hola)
@@ -26,7 +26,7 @@ namespace ManejadorPermisos
             DataGridView tabla = new DataGridView();
             tabla.Columns.Clear();
             tabla.RowTemplate.Height = 30;
-            tabla.DataSource = a.Validar("").Tables["usuarios"];
+            tabla.DataSource = a.Login("").Tables["usuarios"];
             if (tabla.Rows.Count > 1)
                 return true;
             else

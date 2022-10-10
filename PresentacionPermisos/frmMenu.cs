@@ -14,10 +14,11 @@ namespace PresentacionPermisos
 {
     public partial class frmMenu : Form
     {
-        aPermisos adp = new aPermisos();
-        mPermisos mp = new mPermisos();
-        public static bool mostrar, agregar, modificar, eliminar;
-        public static int modulo;
+        aPermisos a = new aPermisos();
+        mPermisos m = new mPermisos();
+        public static int agregar = 0, modificar = 1, eliminar = 2;
+        public static bool mostrar;
+        public static bool[,] permisos = new bool[2, 3];
         public frmMenu()
         {
             InitializeComponent();
@@ -25,17 +26,21 @@ namespace PresentacionPermisos
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            var ds = adp.ExtraerPermisos(frmLogin.idUsuario);
+            List<Button> modulos = new List<Button>();
+            //modulos:
+            modulos.Add(btnProductos);
+            modulos.Add(btnHerramientas);
+
+            var ds = a.ExtraerPermisos(frmLogin.idUsuario);
             var dt = new DataTable();
             dt = ds.Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                agregar = bool.Parse(dt.Rows[i]["escritura"].ToString());
                 mostrar = bool.Parse(dt.Rows[i]["lectura"].ToString());
-                eliminar = bool.Parse(dt.Rows[i]["eliminar"].ToString());
-                modificar = bool.Parse(dt.Rows[i]["actualizacion"].ToString());
-                modulo = int.Parse(dt.Rows[i]["modulo"].ToString());
-                mp.EvaluarPermisos(modulo, mostrar, agregar, modificar, eliminar, btnProductos, btnHerramientas);
+                permisos[i, agregar] = bool.Parse(dt.Rows[i]["escritura"].ToString());
+                permisos[i, modificar] = bool.Parse(dt.Rows[i]["actualizar"].ToString());
+                permisos[i, eliminar] = bool.Parse(dt.Rows[i]["eliminar"].ToString());
+                m.EvaluarLectura(mostrar, modulos[i]);
             }
         }
 
@@ -49,6 +54,16 @@ namespace PresentacionPermisos
         {
             frmHerramientas frm = new frmHerramientas();
             frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
