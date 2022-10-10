@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EntidadesPermisos;
+using AccesoDatosPermisos;
 using ManejadorPermisos;
 
 namespace PresentacionPermisos
@@ -15,35 +15,38 @@ namespace PresentacionPermisos
     public partial class frmLogin : Form
     {
         mUsuarios m = new mUsuarios();
+        aUsuarios a = new aUsuarios();
+        public static int idUsuario;
+        public static string usuario;
+
         public frmLogin()
         {
             InitializeComponent();
         }
 
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            frmProductos frm = new frmProductos();
-            frm.Show();
-        }
-
-        private void btnHerramientas_Click(object sender, EventArgs e)
-        {
-            frmHerramientas frm = new frmHerramientas();
-            frm.Show();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(m.login(txtNombre.Text));
-            bool valid = m.Validar(txtNombre.Text);
-            if (valid == true)
+            try
             {
-                btnHerramientas.Enabled = true;
-                btnProductos.Enabled = true;
-                MessageBox.Show("Usuario correcto");
+                var ds = a.Validar(txtNombre.Text);
+                var dt = new DataTable();
+                dt = ds.Tables[0];
+                idUsuario = int.Parse(dt.Rows[0]["id"].ToString());
+
+                usuario = dt.Rows[0]["nombre"].ToString();
+                if (usuario == txtNombre.Text)
+                {
+                    MessageBox.Show("bienvenido");
+                    frmMenu menu = new frmMenu();
+                    Visible = false;
+                    menu.ShowDialog();
+                }
             }
-            else
-                MessageBox.Show("Error");
+            catch (Exception)
+            {
+                MessageBox.Show("Usuario incorrecto");
+            }
+            
         }
     }
 }

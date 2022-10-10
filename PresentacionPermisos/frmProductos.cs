@@ -16,6 +16,7 @@ namespace PresentacionPermisos
     {
         mProductos manejador;
         public static Productos entidad = new Productos(0, "", "", "");
+        public static bool agregar = frmMenu.agregar;
         int fila = 0, col = 0;
 
         public frmProductos()

@@ -29,36 +29,12 @@ namespace PresentacionPermisos
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnHerramientas = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Enabled = false;
-            this.btnProductos.Location = new System.Drawing.Point(589, 85);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(75, 23);
-            this.btnProductos.TabIndex = 0;
-            this.btnProductos.Text = "Productos";
-            this.btnProductos.UseVisualStyleBackColor = true;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
-            // btnHerramientas
-            // 
-            this.btnHerramientas.Enabled = false;
-            this.btnHerramientas.Location = new System.Drawing.Point(579, 152);
-            this.btnHerramientas.Name = "btnHerramientas";
-            this.btnHerramientas.Size = new System.Drawing.Size(101, 23);
-            this.btnHerramientas.TabIndex = 1;
-            this.btnHerramientas.Text = "Herramientas";
-            this.btnHerramientas.UseVisualStyleBackColor = true;
-            this.btnHerramientas.Click += new System.EventHandler(this.btnHerramientas_Click);
             // 
             // txtNombre
             // 
@@ -112,8 +88,6 @@ namespace PresentacionPermisos
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.btnHerramientas);
-            this.Controls.Add(this.btnProductos);
             this.Name = "frmLogin";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -122,9 +96,6 @@ namespace PresentacionPermisos
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnHerramientas;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnLogin;

@@ -24,3 +24,4 @@ C:\Users\musul\source\repos\Permisos\PresentacionPermisos\bin\Debug\ConectarBd.p
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.csproj.CopyComplete
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.exe
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.pdb
+C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmMenu.resources

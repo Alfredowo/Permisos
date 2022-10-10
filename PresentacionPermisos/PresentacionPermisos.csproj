@@ -64,6 +64,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
@@ -116,6 +125,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatosPermisos\AccesoDatosPermisos.csproj">
+      <Project>{bfe1a6d5-0979-4c84-b78e-894d3c8c3dd7}</Project>
+      <Name>AccesoDatosPermisos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntidadesPermisos\EntidadesPermisos.csproj">
       <Project>{bf9aabfb-af4e-46fc-8b8a-206a54c8075f}</Project>
       <Name>EntidadesPermisos</Name>
