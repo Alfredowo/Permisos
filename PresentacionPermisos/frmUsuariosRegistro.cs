@@ -29,7 +29,7 @@ namespace PresentacionPermisos
             if (txtContraseña.Text != txtContraseña1.Text)
                 MessageBox.Show("Las contraseñas no coinciden", "Error");
             else if (txtNombre.Text == "" || txtApellidop.Text == "" || txtApellidom.Text == "" ||
-                txtFecha.Text == "" || txtRfc.Text == "" || txtContraseña.Text == "")
+                txtFecha.MaskCompleted == false || txtRfc.Text == "" || txtContraseña.Text == "" )
                 MessageBox.Show("No puedes dejar campos vacios", "Error");
             else
             {
