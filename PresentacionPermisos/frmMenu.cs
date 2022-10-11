@@ -15,7 +15,6 @@ namespace PresentacionPermisos
     public partial class frmMenu : Form
     {
         aPermisos a = new aPermisos();
-        mPermisos m = new mPermisos();
         public static int mostrar = 0, agregar = 1, modificar = 2, eliminar = 3;
         public static bool permisoMostrar;
         public static bool[,] permisos = new bool[2, 4];

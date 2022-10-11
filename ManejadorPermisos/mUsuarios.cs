@@ -17,16 +17,9 @@ namespace ManejadorPermisos
 
         public void Guardar(Usuarios Entidad)
         {
-            try
-            {
-                a.Guardar(Entidad);
-                g.Mensaje("Usuario registrado con exito Uwu", "!Atención",
-                    MessageBoxIcon.Information);
-            }
-            catch(Exception)
-            {
-                g.Mensaje("Revisa los campos", "Error", MessageBoxIcon.Error);
-            }
+            a.Guardar(Entidad);
+            g.Mensaje("Usuario registrado con exito Uwu", "!Atención",
+                MessageBoxIcon.Information);
         }
         public void Borrar(Usuarios Entidad)
         {

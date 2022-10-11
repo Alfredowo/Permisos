@@ -31,11 +31,7 @@ namespace PresentacionPermisos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == null || txtDescripcion.Text == null || txtMarca.Text == null)
-            {
-                MessageBox.Show("esta nulo el conchaesumare", "Error");
-            }
-            else
+            try
             {
                 manejador.Guardar(new Herramientas(
                     frmHerramientas.entidad.Codigo,
@@ -45,6 +41,10 @@ namespace PresentacionPermisos
                     int.Parse(txtMedida.Text)
                     ));
                 Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Campos incorrectos");
             }
         }
 

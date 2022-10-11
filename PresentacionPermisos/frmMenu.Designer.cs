@@ -38,7 +38,6 @@ namespace PresentacionPermisos
             this.btnCerrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +90,6 @@ namespace PresentacionPermisos
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.Transparent;
-            this.panelLogo.Controls.Add(this.button1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -100,22 +98,24 @@ namespace PresentacionPermisos
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(30)))), ((int)(((byte)(26)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 0);
+            this.button1.Location = new System.Drawing.Point(498, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 100);
+            this.button1.Size = new System.Drawing.Size(72, 30);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Cambiar de usuario";
+            this.button1.Text = "Atras";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(250, 0);
@@ -163,7 +163,6 @@ namespace PresentacionPermisos
             this.Text = "frmMenu";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panelMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

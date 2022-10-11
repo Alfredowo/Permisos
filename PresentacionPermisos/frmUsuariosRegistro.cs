@@ -15,6 +15,7 @@ namespace PresentacionPermisos
     public partial class frmUsuariosRegistro : Form
     {
         mUsuarios manejador;
+        public static Usuarios entidad = new Usuarios(0, "", "", "", "", "", "");
 
         public frmUsuariosRegistro()
         {
@@ -24,14 +25,16 @@ namespace PresentacionPermisos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            entidad.Id = 0;
             if (txtContraseña.Text != txtContraseña1.Text)
-            {
                 MessageBox.Show("Las contraseñas no coinciden", "Error");
-            }
+            else if (txtNombre.Text == "" || txtApellidop.Text == "" || txtApellidom.Text == "" ||
+                txtFecha.Text == "" || txtRfc.Text == "" || txtContraseña.Text == "")
+                MessageBox.Show("No puedes dejar campos vacios", "Error");
             else
             {
                 manejador.Guardar(new Usuarios(
-                    0,
+                    entidad.Id,
                     txtNombre.Text,
                     txtApellidop.Text,
                     txtApellidom.Text,
@@ -41,6 +44,11 @@ namespace PresentacionPermisos
                     ));
                 Close();
             }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

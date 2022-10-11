@@ -14,10 +14,10 @@ namespace PresentacionPermisos
 {
     public partial class frmLogin : Form
     {
-        mUsuarios m = new mUsuarios();
         aUsuarios a = new aUsuarios();
         public static int idUsuario;
-        public static string usuario;
+        public static string nombre;
+        public static string contraseña;
 
         public frmLogin()
         {
@@ -29,28 +29,29 @@ namespace PresentacionPermisos
             var ds = a.Login(txtNombre.Text);
             var dt = new DataTable();
             dt = ds.Tables[0];
-            idUsuario = int.Parse(dt.Rows[0]["id"].ToString());
-
-            usuario = dt.Rows[0]["nombre"].ToString();
-            if (usuario == txtNombre.Text)
+            try
             {
-                try
+                idUsuario = int.Parse(dt.Rows[0]["id"].ToString());
+                nombre = dt.Rows[0]["nombre"].ToString();
+                contraseña = dt.Rows[0]["pass"].ToString();
+                if ((nombre == txtNombre.Text) && (contraseña == txtContraseña.Text))
                 {
                     MessageBox.Show("Bienvenido" + txtNombre.Text);
                     frmMenu frm = new frmMenu();
                     frm.ShowDialog();
                 }
-                catch (Exception)
+                else
+                    MessageBox.Show("Contraseña incorrecta");
+            }
+            catch (Exception)
+            {
+                DialogResult rs = MessageBox.Show(string.Format("El usuario que ingreso no existe, " +
+                "quiere crear una cuenta?"), "!Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rs == DialogResult.Yes)
                 {
-                    DialogResult rs = MessageBox.Show(string.Format("El usuario que ingreso no existe," +
-                    "quiere crear una cuenta?"), "!Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (rs == DialogResult.Yes)
-                    {
-                        frmUsuariosRegistro frmq = new frmUsuariosRegistro();
-                        frmq.ShowDialog();
-                    }
+                    frmUsuariosRegistro frmq = new frmUsuariosRegistro();
+                    frmq.ShowDialog();
                 }
-
             }
         }
 

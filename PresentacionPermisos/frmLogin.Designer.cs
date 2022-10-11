@@ -35,7 +35,7 @@ namespace PresentacionPermisos
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRegistrarse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -113,17 +113,17 @@ namespace PresentacionPermisos
             this.label2.TabIndex = 9;
             this.label2.Text = "Contraseña:";
             // 
-            // textBox1
+            // txtContraseña
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(284, 152);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(466, 27);
-            this.textBox1.TabIndex = 8;
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña.Location = new System.Drawing.Point(284, 152);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(5);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(466, 27);
+            this.txtContraseña.TabIndex = 8;
             // 
             // button1
             // 
@@ -163,7 +163,7 @@ namespace PresentacionPermisos
             this.Controls.Add(this.btnRegistrarse);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
@@ -189,7 +189,7 @@ namespace PresentacionPermisos
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRegistrarse;
     }

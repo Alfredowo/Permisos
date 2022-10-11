@@ -19,8 +19,9 @@ namespace AccesoDatosPermisos
         }
         public void Guardar(Usuarios Entidad)
         {
-            b.Comando(string.Format("INSERT INTO usuarios VALUES(NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}');",
-                Entidad.Nombre, Entidad.Apellidop, Entidad.Apellidom, Entidad.Fecha, Entidad.Rfc, Entidad.Contraseña));
+            b.Comando(string.Format("call insertarusuarios({6}, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}');",
+                Entidad.Nombre, Entidad.Apellidop, Entidad.Apellidom, Entidad.Fecha, Entidad.Rfc, Entidad.Contraseña,
+                Entidad.Id));
         }
         public void Borrar(Usuarios Entidad)
         {

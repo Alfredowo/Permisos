@@ -29,7 +29,6 @@ namespace PresentacionPermisos
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtApellidom = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,14 +44,8 @@ namespace PresentacionPermisos
             this.label6 = new System.Windows.Forms.Label();
             this.txtContraseña1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(83, 227);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(177, 20);
-            this.txtFecha.TabIndex = 57;
             // 
             // label5
             // 
@@ -87,6 +80,7 @@ namespace PresentacionPermisos
             this.btnRegresar.TabIndex = 51;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnGuardar
             // 
@@ -180,18 +174,27 @@ namespace PresentacionPermisos
             this.label7.TabIndex = 62;
             this.label7.Text = "Repetir contraseña:";
             // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(83, 220);
+            this.txtFecha.Mask = "0000/00/00";
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(189, 20);
+            this.txtFecha.TabIndex = 64;
+            this.txtFecha.ValidatingType = typeof(System.DateTime);
+            // 
             // frmUsuariosRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.txtContraseña1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtRfc);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtApellidom);
             this.Controls.Add(this.label3);
@@ -209,8 +212,6 @@ namespace PresentacionPermisos
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtApellidom;
         private System.Windows.Forms.Label label3;
@@ -226,5 +227,6 @@ namespace PresentacionPermisos
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtContraseña1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox txtFecha;
     }
 }
