@@ -17,7 +17,7 @@ namespace PresentacionPermisos
         mHerramientas manejador;
         public static Herramientas entidad = new Herramientas(0, "", "", "", 0);
         public static bool[,] permisos = frmMenu.permisos;
-        public static int agregar = 0, modificar = 1, eliminar = 2, modulo = 1;
+        public static int agregar = 1, modificar = 2, eliminar = 3, modulo = 1;
         int fila = 0, col = 0;
 
         public frmHerramientas()

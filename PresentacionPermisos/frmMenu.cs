@@ -16,9 +16,9 @@ namespace PresentacionPermisos
     {
         aPermisos a = new aPermisos();
         mPermisos m = new mPermisos();
-        public static int agregar = 0, modificar = 1, eliminar = 2;
-        public static bool mostrar;
-        public static bool[,] permisos = new bool[2, 3];
+        public static int mostrar = 0, agregar = 1, modificar = 2, eliminar = 3;
+        public static bool permisoMostrar;
+        public static bool[,] permisos = new bool[2, 4];
         public frmMenu()
         {
             InitializeComponent();
@@ -26,34 +26,44 @@ namespace PresentacionPermisos
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            List<Button> modulos = new List<Button>();
+            List<string> modulos = new List<string>();
             //modulos:
-            modulos.Add(btnProductos);
-            modulos.Add(btnHerramientas);
+            modulos.Add("productos");
+            modulos.Add("herramientas");
 
             var ds = a.ExtraerPermisos(frmLogin.idUsuario);
             var dt = new DataTable();
             dt = ds.Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                mostrar = bool.Parse(dt.Rows[i]["lectura"].ToString());
+                permisos[i, mostrar] = bool.Parse(dt.Rows[i]["lectura"].ToString());
                 permisos[i, agregar] = bool.Parse(dt.Rows[i]["escritura"].ToString());
                 permisos[i, modificar] = bool.Parse(dt.Rows[i]["actualizar"].ToString());
                 permisos[i, eliminar] = bool.Parse(dt.Rows[i]["eliminar"].ToString());
-                m.EvaluarLectura(mostrar, modulos[i]);
+                //m.EvaluarLectura(permisoMostrar, modulos[i]);
             }
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            frmProductos frm = new frmProductos();
-            frm.Show();
+            if (permisos[0, mostrar] == false)
+                MessageBox.Show("No tienes permisos");
+            else
+            {
+                frmProductos frm = new frmProductos();
+                frm.Show();
+            }
         }
 
         private void btnHerramientas_Click(object sender, EventArgs e)
         {
-            frmHerramientas frm = new frmHerramientas();
-            frm.Show();
+            if (permisos[1, mostrar] == false)
+                MessageBox.Show("No tienes permisos");
+            else
+            {
+                frmHerramientas frm = new frmHerramientas();
+                frm.Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

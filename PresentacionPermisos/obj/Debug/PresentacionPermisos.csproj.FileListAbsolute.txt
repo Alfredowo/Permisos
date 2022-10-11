@@ -25,3 +25,4 @@ C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\Presentacion
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.exe
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.pdb
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmMenu.resources
+C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmUsuariosRegistro.resources

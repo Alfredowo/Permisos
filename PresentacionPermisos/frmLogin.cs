@@ -37,13 +37,19 @@ namespace PresentacionPermisos
                 if (usuario == txtNombre.Text)
                 {
                     MessageBox.Show("Bienvenido" + txtNombre.Text);
-                    frmMenu menu = new frmMenu();
-                    menu.ShowDialog();
+                    frmMenu frm = new frmMenu();
+                    frm.ShowDialog();
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Usuario incorrecto");
+                DialogResult rs = MessageBox.Show(string.Format("El usuario que ingreso no existe," +
+                    "quiere crear una cuenta?"), "!Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rs == DialogResult.Yes)
+                {
+                    frmUsuariosRegistro frm = new frmUsuariosRegistro();
+                    frm.ShowDialog();
+                }
             }
             
         }

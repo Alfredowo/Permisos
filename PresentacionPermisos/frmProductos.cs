@@ -17,7 +17,7 @@ namespace PresentacionPermisos
         mProductos manejador;
         public static Productos entidad = new Productos(0, "", "", "");
         public static bool[,] permisos = frmMenu.permisos;
-        public static int agregar = 0, modificar = 1, eliminar = 2, modulo = 0;
+        public static int agregar = 1, modificar = 2, eliminar = 3, modulo = 0;
         int fila = 0, col = 0;
 
         public frmProductos()

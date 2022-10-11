@@ -6,31 +6,34 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatosPermisos;
 using EntidadesPermisos;
+using Crud;
 
 namespace ManejadorPermisos
 {
     public class mUsuarios
     {
         aUsuarios a = new aUsuarios();
-        
-        public string login(string hola)
+        Grafico g = new Grafico();
+
+        public void Guardar(Usuarios Entidad)
         {
-            DataGridView tabla = new DataGridView();
-            tabla.Columns.Clear();
-            tabla.RowTemplate.Height = 30;
-            tabla.DataSource = a.Login("").Tables["usuarios"];
-            return tabla.Rows[0].ToString();
+            try
+            {
+                a.Guardar(Entidad);
+                g.Mensaje("Usuario registrado con exito Uwu", "!Atención",
+                    MessageBoxIcon.Information);
+            }
+            catch(Exception)
+            {
+                g.Mensaje("Revisa los campos", "Error", MessageBoxIcon.Error);
+            }
         }
-        public bool Validar(string hola)
+        public void Borrar(Usuarios Entidad)
         {
-            DataGridView tabla = new DataGridView();
-            tabla.Columns.Clear();
-            tabla.RowTemplate.Height = 30;
-            tabla.DataSource = a.Login("").Tables["usuarios"];
-            if (tabla.Rows.Count > 1)
-                return true;
-            else
-                return false;
+            DialogResult rs = MessageBox.Show(string.Format(string.Format("Está seguro de borrar su cuenta, {0}?",
+                Entidad.Nombre)), "!Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+                a.Borrar(Entidad);
         }
     }
 }
