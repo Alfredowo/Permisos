@@ -26,32 +26,38 @@ namespace PresentacionPermisos
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var ds = a.Login(txtNombre.Text);
-                var dt = new DataTable();
-                dt = ds.Tables[0];
-                idUsuario = int.Parse(dt.Rows[0]["id"].ToString());
+            var ds = a.Login(txtNombre.Text);
+            var dt = new DataTable();
+            dt = ds.Tables[0];
+            idUsuario = int.Parse(dt.Rows[0]["id"].ToString());
 
-                usuario = dt.Rows[0]["nombre"].ToString();
-                if (usuario == txtNombre.Text)
+            usuario = dt.Rows[0]["nombre"].ToString();
+            if (usuario == txtNombre.Text)
+            {
+                try
                 {
                     MessageBox.Show("Bienvenido" + txtNombre.Text);
                     frmMenu frm = new frmMenu();
                     frm.ShowDialog();
                 }
-            }
-            catch (Exception)
-            {
-                DialogResult rs = MessageBox.Show(string.Format("El usuario que ingreso no existe," +
-                    "quiere crear una cuenta?"), "!Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (rs == DialogResult.Yes)
+                catch (Exception)
                 {
-                    frmUsuariosRegistro frm = new frmUsuariosRegistro();
-                    frm.ShowDialog();
+                    DialogResult rs = MessageBox.Show(string.Format("El usuario que ingreso no existe," +
+                    "quiere crear una cuenta?"), "!Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs == DialogResult.Yes)
+                    {
+                        frmUsuariosRegistro frmq = new frmUsuariosRegistro();
+                        frmq.ShowDialog();
+                    }
                 }
+
             }
-            
+        }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            frmUsuariosRegistro frm = new frmUsuariosRegistro();
+            frm.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)

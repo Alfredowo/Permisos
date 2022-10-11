@@ -61,7 +61,7 @@ namespace PresentacionPermisos
             entidad.Medida = int.Parse(dtg.Rows[fila].Cells[4].Value.ToString());
             switch (col)
             {
-                case 4:
+                case 5:
                     { //editar
                         if (permisos[modulo, modificar] == false)
                             MessageBox.Show("no tienes permiso");
@@ -74,7 +74,7 @@ namespace PresentacionPermisos
                         }
                     }
                     break;
-                case 5:
+                case 6:
                     { //borrar 
                         if (permisos[modulo, eliminar] == false)
                             MessageBox.Show("no tienes permiso");

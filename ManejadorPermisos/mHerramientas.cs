@@ -30,9 +30,18 @@ namespace ManejadorPermisos
 
         public void Guardar(Herramientas Entidad)
         {
-            a.Guardar(Entidad);
-            g.Mensaje("Guardado con exito Uwu", "!Atención",
-                MessageBoxIcon.Information);
+            try
+            {
+                a.Guardar(Entidad);
+                g.Mensaje("Guardado con exito Uwu", "!Atención",
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                g.Mensaje("Fatal error", "!Atención",
+                    MessageBoxIcon.Information);
+            }
+            
         }
 
         public void Mostrar(DataGridView tabla)
@@ -43,7 +52,6 @@ namespace ManejadorPermisos
             tabla.Columns.Insert(5, g.Boton("Editar", Color.SpringGreen));
             tabla.Columns.Insert(6, g.Boton("Borrar", Color.Salmon));
             tabla.Rows[tabla.Rows.Count - 1].Height = (int)0.5;
-            //tabla.Columns[0].Visible = false;
         }
     }
 }
