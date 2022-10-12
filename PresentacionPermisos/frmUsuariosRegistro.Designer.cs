@@ -177,7 +177,7 @@ namespace PresentacionPermisos
             // txtFecha
             // 
             this.txtFecha.Location = new System.Drawing.Point(83, 220);
-            this.txtFecha.Mask = "0000/00/00";
+            this.txtFecha.Mask = "0000-00-00";
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(189, 20);
             this.txtFecha.TabIndex = 64;

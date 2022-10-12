@@ -39,6 +39,7 @@ namespace PresentacionPermisos
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnPermisos = new System.Windows.Forms.Button();
+            this.btnModulos = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,7 @@ namespace PresentacionPermisos
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelMenu.Controls.Add(this.btnModulos);
             this.panelMenu.Controls.Add(this.btnPermisos);
             this.panelMenu.Controls.Add(this.btnEliminar);
             this.panelMenu.Controls.Add(this.btnHerramientas);
@@ -148,10 +150,10 @@ namespace PresentacionPermisos
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(0, 441);
+            this.btnEliminar.Location = new System.Drawing.Point(0, 451);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(250, 45);
+            this.btnEliminar.Size = new System.Drawing.Size(250, 35);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar Cuenta";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -173,15 +175,33 @@ namespace PresentacionPermisos
             this.btnPermisos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPermisos.ForeColor = System.Drawing.Color.White;
-            this.btnPermisos.Location = new System.Drawing.Point(0, 386);
+            this.btnPermisos.Location = new System.Drawing.Point(0, 406);
             this.btnPermisos.Margin = new System.Windows.Forms.Padding(5);
             this.btnPermisos.Name = "btnPermisos";
-            this.btnPermisos.Size = new System.Drawing.Size(250, 45);
+            this.btnPermisos.Size = new System.Drawing.Size(250, 35);
             this.btnPermisos.TabIndex = 6;
             this.btnPermisos.Text = "Permisos";
             this.btnPermisos.UseVisualStyleBackColor = false;
             this.btnPermisos.Visible = false;
             this.btnPermisos.Click += new System.EventHandler(this.btnPermisos_Click);
+            // 
+            // btnModulos
+            // 
+            this.btnModulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnModulos.Enabled = false;
+            this.btnModulos.FlatAppearance.BorderSize = 0;
+            this.btnModulos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModulos.ForeColor = System.Drawing.Color.White;
+            this.btnModulos.Location = new System.Drawing.Point(0, 361);
+            this.btnModulos.Margin = new System.Windows.Forms.Padding(5);
+            this.btnModulos.Name = "btnModulos";
+            this.btnModulos.Size = new System.Drawing.Size(250, 35);
+            this.btnModulos.TabIndex = 7;
+            this.btnModulos.Text = "Permisos";
+            this.btnModulos.UseVisualStyleBackColor = false;
+            this.btnModulos.Visible = false;
+            this.btnModulos.Click += new System.EventHandler(this.btnModulos_Click);
             // 
             // frmMenu
             // 
@@ -216,5 +236,6 @@ namespace PresentacionPermisos
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnPermisos;
+        private System.Windows.Forms.Button btnModulos;
     }
 }

@@ -31,6 +31,8 @@ namespace PresentacionPermisos
             {
                 btnPermisos.Enabled = true;
                 btnPermisos.Visible = true;
+                btnModulos.Enabled = true;
+                btnModulos.Visible = true;
             }
         }
 
@@ -69,6 +71,12 @@ namespace PresentacionPermisos
         private void btnPermisos_Click(object sender, EventArgs e)
         {
             frmPermisos frm = new frmPermisos();
+            frm.Show();
+        }
+
+        private void btnModulos_Click(object sender, EventArgs e)
+        {
+            frmModulos frm = new frmModulos();
             frm.Show();
         }
 

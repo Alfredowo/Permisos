@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="aHerramientas.cs" />
+    <Compile Include="aModulos.cs" />
     <Compile Include="aPermisos.cs" />
     <Compile Include="aProductos.cs" />
     <Compile Include="aUsuarios.cs" />

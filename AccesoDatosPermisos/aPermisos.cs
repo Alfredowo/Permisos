@@ -19,13 +19,13 @@ namespace AccesoDatosPermisos
         public void Borrar(Permisos Entidad)
         {
             b.Comando(string.Format("DELETE FROM permisos WHERE fkusuario = {0} AND modulo = {1};",
-                Entidad.Usuario, Entidad.Modulo));
+                Entidad.FkUsuario, Entidad.FkModulo));
         }
 
         public void Guardar(Permisos Entidad, int opcion)
         {
             b.Comando(string.Format("CALL insertarpermisos({0}, {1}, {2}, {3}, {4}, {5}, {6});",
-                Entidad.Usuario, Entidad.Modulo, Entidad.Lectura, Entidad.Escritura, Entidad.Actualizar, 
+                Entidad.FkUsuario, Entidad.FkModulo, Entidad.Lectura, Entidad.Escritura, Entidad.Actualizar, 
                 Entidad.Eliminar, opcion));
         }
 

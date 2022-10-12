@@ -17,16 +17,23 @@ namespace AccesoDatosPermisos
         {
             return b.Obtener(string.Format("select * from usuarios where nombre = '{0}'", usuario), "usuarios");
         }
+
         public void Guardar(Usuarios Entidad)
         {
-            b.Comando(string.Format("call insertarusuarios({6}, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}');",
-                Entidad.Nombre, Entidad.Apellidop, Entidad.Apellidom, Entidad.Fecha, Entidad.Rfc, Entidad.Contraseña,
-                Entidad.Id));
+            b.Comando(string.Format("call insertarusuarios({6}, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}');", 
+                Entidad.Id, Entidad.Nombre, Entidad.Apellidop, Entidad.Apellidom, Entidad.Fecha, Entidad.Rfc,
+                Entidad.Contraseña));
         }
+
         public void Borrar(Usuarios Entidad)
         {
             b.Comando(string.Format("delete from usuarios where id = {0}",
                 Entidad.Id));
+        }
+
+        public DataSet Mostrar()
+        {
+            return b.Obtener(string.Format("SELECT * FROM usuarios"), "usuarios");
         }
     }
 }

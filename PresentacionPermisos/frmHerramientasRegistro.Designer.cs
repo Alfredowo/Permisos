@@ -29,8 +29,6 @@ namespace PresentacionPermisos
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -43,33 +41,17 @@ namespace PresentacionPermisos
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(138, 107);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 43;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(135, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "Codigo de barras";
-            // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(513, 224);
+            this.txtMarca.Location = new System.Drawing.Point(429, 225);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.Size = new System.Drawing.Size(196, 20);
             this.txtMarca.TabIndex = 41;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(510, 184);
+            this.label3.Location = new System.Drawing.Point(426, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 40;
@@ -77,7 +59,7 @@ namespace PresentacionPermisos
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(591, 360);
+            this.btnRegresar.Location = new System.Drawing.Point(442, 335);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(75, 23);
             this.btnRegresar.TabIndex = 39;
@@ -87,7 +69,7 @@ namespace PresentacionPermisos
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(475, 360);
+            this.btnGuardar.Location = new System.Drawing.Point(241, 335);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 38;
@@ -97,22 +79,22 @@ namespace PresentacionPermisos
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(335, 224);
+            this.txtDescripcion.Location = new System.Drawing.Point(429, 96);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(196, 20);
             this.txtDescripcion.TabIndex = 37;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(138, 224);
+            this.txtNombre.Location = new System.Drawing.Point(107, 96);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(197, 20);
             this.txtNombre.TabIndex = 36;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(332, 184);
+            this.label2.Location = new System.Drawing.Point(426, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 35;
@@ -121,7 +103,7 @@ namespace PresentacionPermisos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 184);
+            this.label1.Location = new System.Drawing.Point(104, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 34;
@@ -129,15 +111,15 @@ namespace PresentacionPermisos
             // 
             // txtMedida
             // 
-            this.txtMedida.Location = new System.Drawing.Point(138, 349);
+            this.txtMedida.Location = new System.Drawing.Point(107, 225);
             this.txtMedida.Name = "txtMedida";
-            this.txtMedida.Size = new System.Drawing.Size(100, 20);
+            this.txtMedida.Size = new System.Drawing.Size(197, 20);
             this.txtMedida.TabIndex = 45;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(135, 309);
+            this.label5.Location = new System.Drawing.Point(104, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 44;
@@ -147,11 +129,9 @@ namespace PresentacionPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(727, 450);
             this.Controls.Add(this.txtMedida);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRegresar);
@@ -168,9 +148,6 @@ namespace PresentacionPermisos
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRegresar;

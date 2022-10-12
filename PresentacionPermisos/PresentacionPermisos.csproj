@@ -70,6 +70,18 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmModulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModulos.Designer.cs">
+      <DependentUpon>frmModulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModulosRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModulosRegistro.Designer.cs">
+      <DependentUpon>frmModulosRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModulos.resx">
+      <DependentUpon>frmModulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModulosRegistro.resx">
+      <DependentUpon>frmModulosRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>

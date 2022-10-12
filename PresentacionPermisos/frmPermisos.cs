@@ -17,6 +17,7 @@ namespace PresentacionPermisos
         mPermisos manejador;
         public static Permisos entidad = new Permisos(0, 0, false, false, false, false);
         public static int opcion = mPermisos.opcion;
+        public static string cmbusuario = "", cmbcategoria = "";
         int fila = 0, col = 0;
 
         public frmPermisos()
@@ -50,8 +51,8 @@ namespace PresentacionPermisos
             //obtener los datos
             try
             {
-                entidad.Usuario = int.Parse(dtg.Rows[fila].Cells[0].Value.ToString());
-                entidad.Modulo = int.Parse(dtg.Rows[fila].Cells[1].Value.ToString());
+                cmbusuario = dtg.Rows[fila].Cells[0].Value.ToString();
+                cmbcategoria = dtg.Rows[fila].Cells[1].Value.ToString();
                 entidad.Lectura = bool.Parse(dtg.Rows[fila].Cells[2].Value.ToString());
                 entidad.Escritura = bool.Parse(dtg.Rows[fila].Cells[3].Value.ToString());
                 entidad.Actualizar = bool.Parse(dtg.Rows[fila].Cells[4].Value.ToString());
@@ -76,11 +77,7 @@ namespace PresentacionPermisos
                         break;
                 }
             }
-            catch (Exception)
-            {
-                string nada = "nada xd";
-            }
-            
+            catch (Exception) { }
         }
 
         private void dtg_CellEnter(object sender, DataGridViewCellEventArgs e)

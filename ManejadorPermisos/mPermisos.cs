@@ -14,6 +14,8 @@ namespace ManejadorPermisos
     public class mPermisos
     {
         aPermisos a = new aPermisos();
+        aUsuarios ausuario = new aUsuarios();
+        aModulos amodulo = new aModulos();
         Grafico g = new Grafico();
         public static int opcion;
 
@@ -21,7 +23,8 @@ namespace ManejadorPermisos
         {
             DialogResult rs = MessageBox.Show(
                 string.Format(string.Format(
-                    "Está seguro de quitarle todos los permisos a {0}?", Entidad.Usuario)
+                    "Está seguro de quitarle todos los permisos del modulo {0} a {0}?",
+                    Entidad.FkModulo, Entidad.FkUsuario)
                 ), "!Atención",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
@@ -44,6 +47,18 @@ namespace ManejadorPermisos
             tabla.Columns.Insert(6, g.Boton("Editar", Color.SpringGreen));
             tabla.Columns.Insert(7, g.Boton("Borrar", Color.Salmon));
             tabla.Rows[tabla.Rows.Count - 1].Height = (int)0.1;
+        }
+        public void ExtraerUsuarios(ComboBox caja)
+        {
+            caja.DataSource = ausuario.Mostrar().Tables["usuarios"];
+            caja.DisplayMember = "nombre";
+            caja.ValueMember = "id";
+        }
+        public void ExtraerModulos(ComboBox caja)
+        {
+            caja.DataSource = amodulo.Mostrar().Tables["modulos"];
+            caja.DisplayMember = "nombre";
+            caja.ValueMember = "id";
         }
     }
 }

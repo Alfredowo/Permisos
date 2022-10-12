@@ -20,14 +20,18 @@ namespace PresentacionPermisos
         {
             InitializeComponent();
             manejador = new mPermisos();
+            manejador.ExtraerUsuarios(cmbUsuario);
+            manejador.ExtraerModulos(cmbModulo);
             if (frmPermisos.opcion == 2)//actualizar 
             {
-                cmbUsuario.Text = frmPermisos.entidad.Usuario.ToString();
-                cmbModulo.Text = frmPermisos.entidad.Modulo.ToString();
+                cmbUsuario.Enabled = false;
+                cmbModulo.Enabled = false;
+                cmbUsuario.Text = frmPermisos.cmbusuario;
+                cmbModulo.Text = frmPermisos.cmbcategoria;
                 chbEscritura.Checked = frmPermisos.entidad.Escritura;
-                chbEscritura.Checked = frmPermisos.entidad.Escritura;
-                chbEscritura.Checked = frmPermisos.entidad.Escritura;
-                chbEscritura.Checked = frmPermisos.entidad.Escritura;
+                chbLectura.Checked = frmPermisos.entidad.Lectura;
+                chbActualizar.Checked = frmPermisos.entidad.Actualizar;
+                chbEliminar.Checked = frmPermisos.entidad.Eliminar;
             }
         }
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -37,8 +41,8 @@ namespace PresentacionPermisos
             else
             {
                 manejador.Guardar(new Permisos(
-                    frmPermisos.entidad.Usuario,
-                    frmPermisos.entidad.Modulo,
+                    int.Parse(cmbUsuario.SelectedValue.ToString()),
+                    int.Parse(cmbModulo.SelectedValue.ToString()),
                     chbLectura.Checked,
                     chbEscritura.Checked,
                     chbActualizar.Checked,

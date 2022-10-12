@@ -28,3 +28,5 @@ C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\Presentacion
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmUsuariosRegistro.resources
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmPermisos.resources
 C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmPermisosRegistro.resources
+C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmModulos.resources
+C:\Users\musul\source\repos\Permisos\PresentacionPermisos\obj\Debug\PresentacionPermisos.frmModulosRegistro.resources

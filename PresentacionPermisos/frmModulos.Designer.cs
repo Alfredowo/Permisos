@@ -1,7 +1,7 @@
 ﻿
 namespace PresentacionPermisos
 {
-    partial class frmHerramientas
+    partial class frmModulos
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@ namespace PresentacionPermisos
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(630, 31);
+            this.btnAgregar.Location = new System.Drawing.Point(357, 26);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 37;
@@ -49,7 +49,7 @@ namespace PresentacionPermisos
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(682, 396);
+            this.btnRegresar.Location = new System.Drawing.Point(357, 273);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(75, 23);
             this.btnRegresar.TabIndex = 36;
@@ -60,42 +60,42 @@ namespace PresentacionPermisos
             // dtg
             // 
             this.dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg.Location = new System.Drawing.Point(43, 88);
+            this.dtg.Location = new System.Drawing.Point(27, 58);
             this.dtg.Name = "dtg";
-            this.dtg.Size = new System.Drawing.Size(714, 282);
+            this.dtg.Size = new System.Drawing.Size(405, 202);
             this.dtg.TabIndex = 35;
             this.dtg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellClick);
             this.dtg.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellEnter);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(113, 34);
+            this.txtBuscar.Location = new System.Drawing.Point(104, 26);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(453, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(173, 20);
             this.txtBuscar.TabIndex = 34;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 41);
+            this.label4.Location = new System.Drawing.Point(34, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 33;
             this.label4.Text = "Buscar:";
             // 
-            // frmHerramientas
+            // frmModulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(460, 313);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.dtg);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label4);
-            this.Name = "frmHerramientas";
-            this.Text = "frmHerramientas";
-            this.Load += new System.EventHandler(this.frmHerramientas_Load);
+            this.Name = "frmModulos";
+            this.Text = "frmModulos";
+            this.Load += new System.EventHandler(this.frmModulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

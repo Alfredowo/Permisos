@@ -10,16 +10,16 @@ namespace EntidadesPermisos
     {
         public Permisos(int usuario, int modulo, bool lectura, bool escritura, bool actualizar, bool eliminar)
         {
-            Usuario = usuario;
-            Modulo = modulo;
+            FkUsuario = usuario;
+            FkModulo = modulo;
             Lectura = lectura;
             Escritura = escritura;
             Actualizar = actualizar;
             Eliminar = eliminar;
         }
 
-        public int Usuario { get; set; }
-        public int Modulo { get; set; }
+        public int FkUsuario { get; set; }
+        public int FkModulo { get; set; }
         public bool Lectura { get; set; }
         public bool Escritura { get; set; }
         public bool Actualizar { get; set; }
