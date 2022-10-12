@@ -198,7 +198,7 @@ namespace PresentacionPermisos
             this.btnModulos.Name = "btnModulos";
             this.btnModulos.Size = new System.Drawing.Size(250, 35);
             this.btnModulos.TabIndex = 7;
-            this.btnModulos.Text = "Permisos";
+            this.btnModulos.Text = "Modulos";
             this.btnModulos.UseVisualStyleBackColor = false;
             this.btnModulos.Visible = false;
             this.btnModulos.Click += new System.EventHandler(this.btnModulos_Click);
