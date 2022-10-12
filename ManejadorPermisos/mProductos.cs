@@ -30,16 +30,9 @@ namespace ManejadorPermisos
 
         public void Guardar(Productos Entidad)
         {
-            try
-            {
-                a.Guardar(Entidad);
-                g.Mensaje("Guardado con exito Uwu", "!Atención",
-                    MessageBoxIcon.Information);
-            }
-            catch (Exception)
-            {
-                g.Mensaje("Revisa los campos", "Error", MessageBoxIcon.Error);
-            }
+            a.Guardar(Entidad);
+            g.Mensaje("Guardado con exito Uwu", "!Atención",
+                MessageBoxIcon.Information);
         }
 
         public void Mostrar(DataGridView tabla)

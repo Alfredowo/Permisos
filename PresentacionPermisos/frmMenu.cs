@@ -18,9 +18,20 @@ namespace PresentacionPermisos
         public static int mostrar = 0, agregar = 1, modificar = 2, eliminar = 3;
         public static bool permisoMostrar;
         public static bool[,] permisos = new bool[2, 4];
+        public static string usuario = frmLogin.nombre;
+
         public frmMenu()
         {
             InitializeComponent();
+        }
+
+        public void Administrador()
+        {
+            if(usuario == "Alfred")
+            {
+                btnPermisos.Enabled = true;
+                btnPermisos.Visible = true;
+            }
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
@@ -41,6 +52,7 @@ namespace PresentacionPermisos
                 permisos[i, eliminar] = bool.Parse(dt.Rows[i]["eliminar"].ToString());
                 //m.EvaluarLectura(permisoMostrar, modulos[i]);
             }
+            Administrador();
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -52,6 +64,12 @@ namespace PresentacionPermisos
                 frmProductos frm = new frmProductos();
                 frm.Show();
             }
+        }
+
+        private void btnPermisos_Click(object sender, EventArgs e)
+        {
+            frmPermisos frm = new frmPermisos();
+            frm.Show();
         }
 
         private void btnHerramientas_Click(object sender, EventArgs e)

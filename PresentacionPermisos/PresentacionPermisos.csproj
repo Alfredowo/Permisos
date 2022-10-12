@@ -76,6 +76,12 @@
     <Compile Include="frmPermisos.Designer.cs">
       <DependentUpon>frmPermisos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPermisosRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPermisosRegistro.Designer.cs">
+      <DependentUpon>frmPermisosRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPermisos.resx">
       <DependentUpon>frmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPermisosRegistro.resx">
+      <DependentUpon>frmPermisosRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>

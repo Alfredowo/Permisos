@@ -45,6 +45,7 @@ namespace PresentacionPermisos
             this.btnAgregar.TabIndex = 37;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnRegresar
             // 
@@ -54,6 +55,7 @@ namespace PresentacionPermisos
             this.btnRegresar.TabIndex = 36;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // dtg
             // 
@@ -62,6 +64,8 @@ namespace PresentacionPermisos
             this.dtg.Name = "dtg";
             this.dtg.Size = new System.Drawing.Size(714, 282);
             this.dtg.TabIndex = 35;
+            this.dtg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellClick);
+            this.dtg.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellEnter);
             // 
             // txtBuscar
             // 
@@ -91,6 +95,7 @@ namespace PresentacionPermisos
             this.Controls.Add(this.label4);
             this.Name = "frmPermisos";
             this.Text = "frmPermisos";
+            this.Load += new System.EventHandler(this.frmPermisos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

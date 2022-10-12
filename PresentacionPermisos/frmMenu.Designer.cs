@@ -168,6 +168,7 @@ namespace PresentacionPermisos
             // btnPermisos
             // 
             this.btnPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnPermisos.Enabled = false;
             this.btnPermisos.FlatAppearance.BorderSize = 0;
             this.btnPermisos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPermisos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -179,6 +180,8 @@ namespace PresentacionPermisos
             this.btnPermisos.TabIndex = 6;
             this.btnPermisos.Text = "Permisos";
             this.btnPermisos.UseVisualStyleBackColor = false;
+            this.btnPermisos.Visible = false;
+            this.btnPermisos.Click += new System.EventHandler(this.btnPermisos_Click);
             // 
             // frmMenu
             // 

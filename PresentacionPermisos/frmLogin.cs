@@ -29,22 +29,22 @@ namespace PresentacionPermisos
             var ds = a.Login(txtNombre.Text);
             var dt = new DataTable();
             dt = ds.Tables[0];
-            try
-            {
+            //try
+            //{
                 idUsuario = int.Parse(dt.Rows[0]["id"].ToString());
                 nombre = dt.Rows[0]["nombre"].ToString();
                 contraseña = dt.Rows[0]["pass"].ToString();
                 if ((nombre == txtNombre.Text) && (contraseña == txtContraseña.Text))
                 {
-                    MessageBox.Show("Bienvenido" + txtNombre.Text);
+                    MessageBox.Show("Bienvenido " + txtNombre.Text);
                     frmMenu frm = new frmMenu();
                     frm.ShowDialog();
                 }
                 else
                     MessageBox.Show("Contraseña incorrecta");
-            }
-            catch (Exception)
-            {
+            //}
+            //catch (Exception)
+            /*{
                 DialogResult rs = MessageBox.Show(string.Format("El usuario que ingreso no existe, " +
                 "quiere crear una cuenta?"), "!Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rs == DialogResult.Yes)
@@ -52,7 +52,7 @@ namespace PresentacionPermisos
                     frmUsuariosRegistro frmq = new frmUsuariosRegistro();
                     frmq.ShowDialog();
                 }
-            }
+            }*/
         }
 
         private void btnRegistrarse_Click(object sender, EventArgs e)

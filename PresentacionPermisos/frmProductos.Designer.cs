@@ -62,7 +62,7 @@ namespace PresentacionPermisos
             this.dtg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg.Location = new System.Drawing.Point(43, 88);
             this.dtg.Name = "dtg";
-            this.dtg.Size = new System.Drawing.Size(578, 282);
+            this.dtg.Size = new System.Drawing.Size(714, 282);
             this.dtg.TabIndex = 30;
             this.dtg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellClick);
             this.dtg.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_CellEnter);

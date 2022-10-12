@@ -31,7 +31,7 @@ namespace AccesoDatosPermisos
 
         public DataSet Mostrar()
         {
-            return b.Obtener(string.Format("SELECT * FROM permisos"), "productos");
+            return b.Obtener(string.Format("SELECT * FROM viewpermisos"), "permisos");
         }
     }
 }
