@@ -34,6 +34,13 @@ namespace PresentacionPermisos
                 btnModulos.Enabled = true;
                 btnModulos.Visible = true;
             }
+            else
+            {
+                btnPermisos.Enabled = false;
+                btnPermisos.Visible = false;
+                btnModulos.Enabled = false;
+                btnModulos.Visible = false;
+            }
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
